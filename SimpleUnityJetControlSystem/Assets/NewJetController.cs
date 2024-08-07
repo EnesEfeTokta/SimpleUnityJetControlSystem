@@ -38,7 +38,7 @@ public class NewJetController : MonoBehaviour
     [Header("Values")]
     [SerializeField] private float throttleIncrement = 0.1f;
     [SerializeField] private float maxThrust = 200f;
-    [SerializeField] private float responsiveness = 10f;
+    [SerializeField] private float responsiveness = 15000f;
     [SerializeField] private float lift = 135f;
 
     [Header("UIs")]

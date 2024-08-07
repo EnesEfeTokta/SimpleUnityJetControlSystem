@@ -8,15 +8,19 @@ public class CameraController : MonoBehaviour
     [SerializeField] private Transform[] povs;
     [SerializeField] private float speed;
 
-    private int index = 1;
+    private int index = 0;
     private Vector3 target;
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1)) index = 0;
-        else if (Input.GetKeyDown(KeyCode.Alpha2)) index = 1;
-        else if (Input.GetKeyDown(KeyCode.Alpha3)) index = 2;
-        else if (Input.GetKeyDown(KeyCode.Alpha4)) index = 3;
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            index ++;
+            if (povs.Length - 1 < index)
+            {
+                index = 0;
+            }
+        }
 
         target = povs[index].position;
     }
